@@ -19,7 +19,7 @@ export default function StartupProject() {
   }
   return (
     <Fade bottom duration={1000} distance="20px">
-      <div className="main" id="projects">
+      <div className="main" id="research-projects">
         <div>
           <h1 className="skills-heading">{bigProjects.title}</h1>
           <p
@@ -48,7 +48,7 @@ export default function StartupProject() {
                       <img
                         src={project.image}
                         alt={project.projectName}
-                        className="card-image"
+                        className="startup-card-image"
                       ></img>
                     </div>
                   ) : null}

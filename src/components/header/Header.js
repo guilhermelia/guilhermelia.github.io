@@ -7,22 +7,24 @@ import {
   greeting,
   workExperiences,
   skillsSection,
-  openSource,
+  bigProjects,
   blogSection,
-  talkSection,
   achievementSection,
-  resumeSection
+  professionalProjects,
+  eventsGallery,
+  testimonials
 } from "../../portfolio";
 
 function Header() {
   const {isDark} = useContext(StyleContext);
   const viewExperience = workExperiences.display;
-  const viewOpenSource = openSource.display;
+  const viewResearchProjects = bigProjects.display;
   const viewSkills = skillsSection.display;
   const viewAchievement = achievementSection.display;
   const viewBlog = blogSection.display;
-  const viewTalks = talkSection.display;
-  const viewResume = resumeSection.display;
+  const viewProfessionalProjects = professionalProjects.display;
+  const viewEventsGallery = eventsGallery.display;
+  const viewTestimonials = testimonials.display;
 
   return (
     <Headroom>
@@ -46,14 +48,22 @@ function Header() {
               <a href="#skills">Skills</a>
             </li>
           )}
+          <li>
+            <a href="#education">Education</a>
+          </li>
           {viewExperience && (
             <li>
-              <a href="#experience">Work Experiences</a>
+              <a href="#experience">Experience</a>
             </li>
           )}
-          {viewOpenSource && (
+          {viewProfessionalProjects && (
             <li>
-              <a href="#opensource">Open Source</a>
+              <a href="#professional-projects">Professional Projects</a>
+            </li>
+          )}
+          {viewResearchProjects && (
+            <li>
+              <a href="#research-projects">Research Projects</a>
             </li>
           )}
           {viewAchievement && (
@@ -63,22 +73,19 @@ function Header() {
           )}
           {viewBlog && (
             <li>
-              <a href="#blogs">Blogs</a>
+              <a href="#blogs">Publications</a>
             </li>
           )}
-          {viewTalks && (
+          {viewEventsGallery && (
             <li>
-              <a href="#talks">Talks</a>
+              <a href="#events">Speaking Events</a>
             </li>
           )}
-          {viewResume && (
+          {viewTestimonials && (
             <li>
-              <a href="#resume">Resume</a>
+              <a href="#testimonials">Testimonials</a>
             </li>
           )}
-          <li>
-            <a href="#contact">Contact Me</a>
-          </li>
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>
